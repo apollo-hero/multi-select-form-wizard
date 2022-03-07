@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="A multi-step form is a long-form broken down into multiple pieces/steps to make an otherwise long form less intimidating for visitors to complete." name="description">
+    <meta content="Sam Norton" name="author">
+    <title>Bootstrap 5 Multi-Step Form</title>
+    <!-- FAVICONS -->
+    <link href="favicons/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
+    <link href="favicons/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
+    <link href="favicons/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="favicons/apple-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+    <link href="favicons/apple-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="favicons/apple-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+    <link href="favicons/apple-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link href="favicons/apple-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
+    <link href="favicons/apple-icon-180x180.png" rel="apple-touch-icon" sizes="180x180">
+    <link href="favicons/android-icon-192x192.png" rel="icon" sizes="192x192" type="image/png">
+    <link href="favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="/manifest.json" rel="manifest">
+    <meta content="#ffffff" name="msapplication-TileColor">
+    <meta content="favicons/ms-icon-144x144.png" name="msapplication-TileImage">
+    <meta content="#ffffff" name="theme-color">
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- FONT -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- CONTAINER -->
+    <div class="container d-flex align-items-center min-vh-100 justify-content-center">
+        <div class="row g-0 justify-content-center">
+            <!-- TITLE -->
+<!--             <div class="col-lg-4 offset-lg-1 mx-0 px-0">
+                <div id="title-container">
+                    <h2>Multiple step form</h2>
+                    <h3>Self Checker Form</h3>
+                    <p>A clinical assessment multi-step form that will assist individuals on deciding when to seek testing or medical care</p>
+                </div>
+            </div> -->
+            <!-- FORMS -->
+            <div class="col-lg-12 mx-0 px-0">
+                <div class="progress">
+                    <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="50" class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 0%"></div>
+                </div>
+                <div id="qbox-container">
+                    <form class="needs-validation" id="form-wrapper" method="post" name="form-wrapper" >
+                        <div id="steps-container">
+                            <div class="step">
+                                <h4>Let’s see if you have a case!</h4>
+                                <h6>Applying for an injury legal claim takes just 3 minutes. Ready to go?</h6>
+                            </div>
+                            <div class="step">
+                                <h4 class="step_1">How were you injured?</h4>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                          <img src="img/car.svg" class="card-img-top" alt="...">
+                                          <div class="card-body">
+                                            <h5 class="card-title" style="text-align: center;">Car Accident</h5>
+                                            <div class="form-check ps-0 q-box">
+                                                <div class="q-box__question">
+                                                    <input class="form-check-input question__input" id="q_2_yes" name="q_2" type="radio" value="Yes"> 
+                                                    <label class="form-check-label question__label" for="q_2_yes">Yes</label>
+                                                </div>                                        
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="card">
+                                          <img src="img/job.svg" class="card-img-top" alt="...">
+                                          <div class="card-body">
+                                            <h5 class="card-title" style="text-align: center;">On the job</h5>
+                                            <div class="form-check ps-0 q-box">
+                                                <div class="q-box__question">
+                                                    <input class="form-check-input question__input" id="q_2_job" name="q_2" type="radio" value="Yes"> 
+                                                    <label class="form-check-label question__label" for="q_2_job">Yes</label>
+                                                </div>                                        
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>                                
+                                    <div class="col-lg-6">
+                                        <div class="card">
+                                          <img src="img/slip.svg" class="card-img-top" alt="...">
+                                          <div class="card-body">
+                                            <h5 class="card-title" style="text-align: center;">Slip & Fail</h5>
+                                            <div class="form-check ps-0 q-box">
+                                                <div class="q-box__question">
+                                                    <input class="form-check-input question__input" id="q_2_slip" name="q_2" type="radio" value="Yes"> 
+                                                    <label class="form-check-label question__label" for="q_2_slip">Yes</label>
+                                                </div>                                        
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="card">
+                                          <img src="img/other.svg" class="card-img-top" alt="...">
+                                          <div class="card-body">
+                                            <h5 class="card-title" style="text-align: center;">Others</h5>
+                                            <div class="form-check ps-0 q-box">
+                                                <div class="q-box__question">
+                                                    <input class="form-check-input question__input" id="q_2_other" name="q_2" type="radio" value="Yes"> 
+                                                    <label class="form-check-label question__label" for="q_2_other">Yes</label>
+                                                </div>                                        
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <h4>SORRY TO HEAR THAT! WHO WAS HURT?</h4>
+                                <div class="form-check ps-0 q-box">
+                                    <div class="q-box__question">
+                                        <input class="form-check-input question__input" id="q_3_yes" name="q_3" type="radio" value=""> 
+                                        <label class="form-check-label question__label" for="q_3_yes">I was hurt</label>
+                                    </div>
+                                    <div class="q-box__question">
+                                        <input checked class="form-check-input question__input" id="q_3_no" name="q_3" type="radio" value=""> 
+                                        <label class="form-check-label question__label" for="q_3_no">A loved one was hurt</label>
+                                    </div>
+                                    <div class="q-box__question">
+                                        <input class="form-check-input question__input" id="q_3_both" name="q_3" type="radio" value=""> 
+                                        <label class="form-check-label question__label" for="q_3_both">We were both hurt</label>
+                                    </div>
+                                    <div class="q-box__question">
+                                        <input class="form-check-input question__input" id="q_3_one" name="q_3" type="radio" value="no_One"> 
+                                        <label class="form-check-label question__label" for="q_3_one">No one was hurt</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <h4>WHERE DID THE ACCIDENT OCCUR?</h4>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Open this select menu</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District Of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                    <option value="AS">American Samoa</option>
+                                    <option value="GU">Guam</option>
+                                    <option value="MP">Northern Mariana Islands</option>
+                                    <option value="PR">Puerto Rico</option>
+                                    <option value="UM">United States Minor Outlying Islands</option>
+                                    <option value="VI">Virgin Islands</option>                                  
+                                    <option value="Somewhere">Somewhere else</option>
+                                    <option value="NoKnow">I don't know</option>
+                                </select>
+                            </div>
+                            <div class="step">
+                                <h4>WHEN DID THE ACCIDENT HAPPEN?</h4>
+                                <div class="row">
+                                  <div class="input-group date ps-0" id="datepicker">
+                                    <input type="date" class="form-control" id="date"/>
+                                  </div>
+                                  <div class="form-check ps-0 q-box">
+                                    <div class="q-box__question">
+                                          <input class="form-check-input question__input" type="checkbox" value="" name="date" id="nodate">
+                                          <label class="form-check-label question__label" for="nodate">
+                                            I don't know
+                                          </label>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <h4>DID YOU RECEIVE TREATMENT FOR YOUR INJURIES?</h4>
+                                <div class="form-check ps-0 q-box">
+                                    <div class="q-box__question">
+                                          <input class="form-check-input question__input" type="checkbox" value="" name="Default" id="flexCheckDefault">
+                                          <label class="form-check-label question__label" for="flexCheckDefault">
+                                            I went the hospital
+                                          </label>
+                                    </div>
+                                    <div class="q-box__question">
+                                          <input class="form-check-input question__input" type="checkbox" value="" name="doctor" id="doctor">
+                                          <label class="form-check-label question__label" for="doctor">
+                                            I was treated by a doctor
+                                          </label>
+                                    </div>
+                                    <div class="q-box__question">
+                                          <input class="form-check-input question__input" type="checkbox" value="" name="chiropractor" id="chiropractor">
+                                          <label class="form-check-label question__label" for="chiropractor">
+                                            I was treated by a chiropractor
+                                          </label>
+                                    </div>
+                                    <div class="q-box__question">
+                                          <input class="form-check-input question__input" type="checkbox" value="" name="othertreat" id="othertreat">
+                                          <label class="form-check-label question__label" for="othertreat">
+                                            Other treatment was received
+                                          </label>
+                                    </div>
+                                    <div class="q-box__question">
+                                          <input class="form-check-input question__input" type="checkbox" value="" name="notreat" id="notreat">
+                                          <label class="form-check-label question__label" for="notreat">
+                                            No treatment was received
+                                          </label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="step">
+                                <h4>Provide us with your personal information</h4>
+                                <div class="mt-1">
+                                    <label class="form-label">First Name:</label> 
+                                    <input class="form-control" id="first_name" name="first_name" type="text" required>
+                                </div>
+                                <div class="mt-1">
+                                    <label class="form-label">Last Name:</label> 
+                                    <input class="form-control" id="first_name" name="first_name" type="text" required>
+                                </div>
+                                <div class="mt-2">
+                                    <label class="form-label">Description of Incident:</label> 
+                                    <input class="form-control" id="address" name="address" type="text">
+                                </div>
+                                <div class="mt-2">
+                                    <label class="form-label">Email:</label> 
+                                    <input class="form-control" id="email" name="email" type="email">
+                                </div>
+                                <div class="mt-2">
+                                    <label class="form-label">Phone / Mobile Number:</label> 
+                                    <input class="form-control" id="phone" name="phone" type="text" required>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="mt-5">
+                                    <h4>Sorry, we cannot help you if no one was hurt</h4> 
+                                </div>
+                            </div>
+                        </div>
+                        <div id="q-box__buttons">
+                            <button id="prev-btn" type="button">Previous</button> 
+                            <button id="next-btn" type="button">Next</button> 
+                            <button id="submit-btn" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><!-- PRELOADER -->
+    <div id="preloader-wrapper">
+        <div id="preloader"></div>
+        <div class="preloader-section section-left"></div>
+        <div class="preloader-section section-right"></div>
+    </div>
+
+<!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js
+" type="text/javascript"></script>
+        <!-- Static App Form Collection Script -->
+<script src="https://static.app/js/static-forms.js" type="text/javascript"></script>
+<!-- Static App Form Collection Script -->
+<script src="https://static.app/js/static-forms.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="js/script.js">
+    </script>
+<!-- Static App Form Collection Script -->
+<script src="" type="text/javascript"></script>
+<!-- Static App Form Collection Script -->
+<script src="" type="text/javascript"></script>
+</body>
+</html>
